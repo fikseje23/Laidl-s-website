@@ -17,6 +17,10 @@
         .text-glow {
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(100, 100, 100, 0.5);
         }
+        
+        .info-box {
+            background-color: rgba(31, 41, 55, 0.95); 
+        }
     </style>
 </head>
 
@@ -29,22 +33,74 @@
     </header>
 
     
-    <button onclick="window.location.href='index.html';" 
-            class="mb-12 px-8 py-3 rounded-xl bg-green-700 text-white font-bold text-lg 
-                            transition-all duration-300 shadow-xl hover:bg-green-600 transform hover:scale-105 
-                            border-b-4 border-green-900 active:border-b-2 active:translate-y-0.5">
-        ← Get Back to Menu
-    </button>
+    <div class="flex flex-wrap justify-center gap-6 mb-12">
+        
+        
+        <button onclick="window.location.href='index.html';" 
+                class="px-8 py-3 rounded-xl bg-green-700 text-white font-bold text-lg 
+                       transition-all duration-300 shadow-xl hover:bg-green-600 transform hover:scale-105 
+                       border-b-4 border-green-900 active:border-b-2 active:translate-y-0.5">
+            ← Get Back to Menu
+        </button>
+
+        
+        <a href="https://www.roblox.com/games/78242982256332/Laidls-supermarket-Official" target="_blank"
+            class="px-8 py-3 rounded-xl bg-red-600 text-white font-bold text-lg 
+                            transition-all duration-300 shadow-xl hover:bg-red-500 transform hover:scale-105 
+                            border-b-4 border-red-800 active:border-b-2 active:translate-y-0.5 no-underline flex items-center space-x-2">
+            
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+            <span>Play Laidls Supermarket!</span>
+        </a>
+    </div>
 
     
-    <div class="max-w-3xl w-full p-8 rounded-xl bg-gray-800/90 backdrop-blur-md shadow-2xl border-l-4 border-teal-400">
-        <h2 class="text-3xl font-bold text-teal-300 mb-4">Game Details Coming Soon!</h2>
-        <p class="text-gray-300 text-lg leading-relaxed">
-            We are working hard to put together all the best details, sneak peeks, and awesome features of the game here. Check back later for cool screenshots and descriptions!
-        </p>
-        <p class="text-gray-400 mt-4 text-sm">
-            You can replace this section with your game's story, controls, and features.
-        </p>
+    <div class="max-w-3xl w-full space-y-8">
+        
+        
+        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-teal-400">
+            <h2 class="text-3xl font-bold text-teal-300 mb-4 border-b pb-2 border-gray-700">What is Laidls Supermarket?</h2>
+            <p class="text-gray-300 text-lg leading-relaxed">
+                <span class="font-bold text-white">Laidls Supermarket</span> is a vibrant, massive multiplayer role-playing experience built on Roblox. It’s a huge, fully stocked environment where you can choose your life!
+                <br><br>
+                Become a dedicated Employee and work through the ranks by stocking the detailed aisles like the Produce, Meat, or role-play as a Shopper, get down and purchasing hundreds of unique items using the realistic checkout system. Every area, from the main floor to the back rooms, is ready for your story!
+            </p>
+        </div>
+
+        
+        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-violet-400">
+            <h2 class="text-3xl font-bold text-violet-400 mb-4 border-b pb-2 border-gray-700">Awesome Features!</h2>
+            <div class="space-y-4 text-gray-300">
+                <div class="flex items-start space-x-3">
+                    <span class="text-xl text-yellow-400">👨‍🍳</span>
+                    <p><strong>Fresh Food:</strong> Work at the pizza place or at cozy plate(MR+ only).</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-xl text-yellow-400">🔐</span>
+                    <p><strong>Detailed Staff Areas:</strong> Experience the life of an employee behind the scenes! Access the staff room, and manager's offices to take breaks, and hold important meetings.</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-xl text-yellow-400">🛒</span>
+                    <p><strong>Realistic Shopping:</strong> Come down to explore the massive store. Interact with hundreds of different products to buy!</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-xl text-yellow-400">📦</span>
+                    <p><strong>Inventory & Stocking:</strong> Employees can find items in the back warehouse, and ensure the shelves are always full.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-red-500">
+            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b pb-2 border-gray-700">What's Coming Next?</h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                We're always building and expanding Laidls! Here are some exciting updates you can look forward to:
+            </p>
+            <ul class="list-disc list-inside space-y-3 text-gray-400 ml-4">
+                <li>**Halloween Event:** Get ready for spooky surprises, special items, and themed decorations throughout the store and fun activities for all players!</li>
+            </ul>
+        </div>
+
     </div>
 
 </body>
