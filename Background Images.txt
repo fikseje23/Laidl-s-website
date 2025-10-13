@@ -1,0 +1,21 @@
+
+Normal images
+
+index.html = https://img.itch.zone/aW1hZ2UvMjYyMjMwMC8xNTczMDkwNS5qcGc=/original/Y6LByv.jpg
+aboutTheGame.html = https://img.itch.zone/aW1hZ2UvMjYyMjMwMC8xNTczMDkwNy5qcGc=/original/AI7LNE.jpg
+FAQ.html = https://preview.redd.it/dark-frutiger-aero-wallpaper-v0-785b0ihgqigd1.png?width=3840&auto=webp&s=88ff0b6ac5fb8cd9b32ae8b60049a36f2ac5c782
+Ownership.html = https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ebaf6a09-c33a-4654-bb89-8fecb51f57fd/di23a8s-3b764a6c-c6f4-4814-8010-e90a654878e2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lYmFmNmEwOS1jMzNhLTQ2NTQtYmI4OS04ZmVjYjUxZjU3ZmQvZGkyM2E4cy0zYjc2NGE2Yy1jNmY0LTQ4MTQtODAxMC1lOTBhNjU0ODc4ZTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.sk9oUGw73AWG3nRIJZYkCew1R5mQMlNgqOORmYX9CUg
+
+Hallowen images
+
+index.html = 
+aboutTheGame.html = 
+FAQ.html = 
+Ownership.html = 
+
+Winter images
+
+index.html = 
+aboutTheGame.html = 
+FAQ.html = 
+Ownership.html = 
