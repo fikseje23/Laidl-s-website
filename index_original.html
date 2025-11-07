@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Main Menu</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            
+            background-image: url('https://img.itch.zone/aW1hZ2UvMjYyMjMwMC8xNTczMDkwNS5qcGc=/original/Y6LByv.jpg');
+            background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
+        }
+        
+        
+        .text-glow {
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(100, 100, 100, 0.5);
+        }
+
+        
+        .menu-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+            border-bottom: 5px solid;
+        }
+        .menu-button:active {
+            transform: translateY(2px) scale(0.98);
+            box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+            border-bottom-width: 2px;
+        }
+    </style>
+</head>
+
+<body class="p-4 min-h-screen flex flex-col items-center justify-center">
+
+    
+    <header class="text-center mb-12 p-8 rounded-2xl bg-gray-900/80 backdrop-blur-sm shadow-2xl max-w-lg w-full border-b-4 border-yellow-500">
+        <h1 class="text-6xl font-extrabold text-yellow-400 text-glow">WingyBlox Hub</h1>
+        <h3 class="text-3xl font-semibold mt-4 text-gray-300 text-glow">Community Information Center</h3>
+    </header>
+
+    
+    <nav class="max-w-xl w-full grid grid-cols-1 gap-6 p-6 rounded-xl bg-gray-800/90 backdrop-blur-md shadow-2xl">
+        
+        
+        <a href="FAQ.html" class="menu-button bg-red-600 hover:bg-red-700 border-red-900 text-white font-extrabold text-2xl p-6 rounded-xl text-center no-underline">
+            Frequently Asked Questions
+        </a>
+
+        
+        <a href="Ownership.html" class="menu-button bg-violet-600 hover:bg-violet-700 border-violet-900 text-white font-extrabold text-2xl p-6 rounded-xl text-center no-underline">
+            Meet The Owners
+        </a>
+        
+        
+        <a href="aboutTheGame.html" class="menu-button bg-teal-600 hover:bg-teal-700 border-teal-900 text-white font-extrabold text-2xl p-6 rounded-xl text-center no-underline">
+            About Our Game
+        </a>
+        
+        
+        <a href="https://www.roblox.com/communities/15554621/Laidls-Group#!/about" target="_blank" class="menu-button bg-blue-600 hover:bg-blue-700 border-blue-900 text-white font-extrabold text-2xl p-6 rounded-xl text-center no-underline flex items-center justify-center space-x-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/2048px-Roblox_Corporation_2025_logo.svg.png" 
+                 alt="Roblox Logo" 
+                 class="w-8 h-8 bg-white rounded-full p-1 ring-2 ring-white"
+                 onerror="this.onerror=null; this.src='https://placehold.co/32x32/FFFFFF/000000?text=R';">
+            <span>Our Roblox Group</span>
+        </a>
+
+        <a href="https://discord.gg/r6zm5AvXMV" target="_blank" class="menu-button bg-[#5865F2] hover:bg-[#4a54c4] border-[#404ab0] text-white font-extrabold text-2xl p-6 rounded-xl text-center no-underline flex items-center justify-center space-x-4">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"
+                 alt="Discord Logo"
+                 class="w-10 h-10"
+                 onerror="this.onerror=null; this.src='https://placehold.co/40x32/5865F2/FFFFFF?text=Logo';">
+            <span>Our Discord Server</span>
+        </a>
+    </nav>
+</body>
+</html>
