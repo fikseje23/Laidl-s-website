@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions</title>
+    <title>WingyBlox - FAQ</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-attachment: fixed;
+        }
         
         .expand-content {
             transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, padding 0.5s ease-in-out;
@@ -17,280 +24,335 @@
             padding-bottom: 0;
         }
 
-        
         .expand-content.active {
-            max-height: 500px; 
+            max-height: 2000px; 
             opacity: 1;
-            padding-top: 1rem; 
-            padding-bottom: 1rem;
+            padding-top: 1.5rem; 
+            padding-bottom: 1.5rem;
         }
 
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            
-            background-image: url('https://preview.redd.it/dark-frutiger-aero-wallpaper-v0-785b0ihgqigd1.png?width=3840&auto=webp&s=88ff0b6ac5fb8cd9b32ae8b60049a36f2ac5c782');
-            background-size: cover;
-            background-attachment: fixed; 
-            background-position: center; 
+        .text-glow {
+            text-shadow: 0 0 20px rgba(79, 209, 197, 0.3);
         }
         
         .faq-card {
-            
-            background-color: rgba(31, 41, 55, 0.95); 
+            background-color: rgba(31, 41, 55, 0.95);
+            border: 2px solid rgba(79, 209, 197, 0.2);
+            transition: all 0.3s ease;
         }
-        
-        
-        .text-glow {
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(100, 100, 100, 0.5);
+
+        .faq-card:hover {
+            border-color: rgba(79, 209, 197, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-toggle-button {
+            background: linear-gradient(135deg, #4fd1c5 0%, #48bb78 100%);
+        }
+
+        .faq-toggle-button:hover {
+            background: linear-gradient(135deg, #3db8ad 0%, #38a169 100%);
+        }
+
+        .btn-back {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-back:hover {
+            box-shadow: 0 6px 25px rgba(72, 187, 120, 0.6);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
 <body class="p-4 min-h-screen flex flex-col items-center">
 
-    
-    <header class="text-center mb-8 p-6 rounded-2xl bg-gray-900/80 backdrop-blur-sm shadow-2xl max-w-3xl w-full border-b-4 border-teal-400">
-        
-        <h1 class="text-5xl font-extrabold text-violet-500 text-glow" >Welcome to frequently asked questions</h1>
-        
-        <h3 class="text-2xl font-semibold mt-3 text-teal-400 text-glow">Here you can find answers to frequently asked questions</h3>
+    <!-- Header -->
+    <header class="text-center mb-8 p-6 rounded-2xl bg-gray-900/90 backdrop-blur-sm shadow-2xl max-w-3xl w-full border-b-4 border-teal-400">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 text-glow">
+            Frequently Asked Questions
+        </h1>
+        <h3 class="text-xl md:text-2xl font-semibold mt-3 text-gray-300">
+            Your questions answered
+        </h3>
     </header>
 
-    
+    <!-- Back Button -->
     <button onclick="window.location.href='index.html';" 
-            class="mb-8 px-8 py-3 rounded-xl bg-green-700 text-white font-bold text-lg 
-                            transition-all duration-300 shadow-xl hover:bg-green-600 transform hover:scale-105 
-                            border-b-4 border-green-900 active:border-b-2 active:translate-y-0.5">
-        ← Get Back to Menu
+            class="btn-back mb-8 px-8 py-3 rounded-xl bg-green-600 text-white font-bold text-lg border-b-4 border-green-800 active:border-b-2 active:translate-y-0.5">
+        ← Back to Menu
     </button>
     
-    
-    <div class="max-w-3xl w-full p-6 rounded-xl bg-gray-800/90 backdrop-blur-md shadow-2xl mb-8 border-l-4 border-violet-500">
+    <!-- Intro Text -->
+    <div class="max-w-3xl w-full p-6 rounded-xl bg-gray-800/90 backdrop-blur-md shadow-2xl mb-8 border-l-4 border-teal-500">
         <h3 class="text-xl text-gray-200 font-light leading-relaxed">
-            Hello there! If you are here, you maybe have questions, and I'm going to answer the most frequently asked ones. If you still have questions, join our Discord server and we'll try to answer them.
+            Hello there! If you have questions about joining WingyBlox, becoming staff, or how our systems work, you're in the right place. If you don't find your answer here, join our Discord server and we'll be happy to help!
         </h3>
     </div>
-    
 
-
-
-    
-    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-8 border-2 border-gray-700">
-
-        
-        <button class="w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none 
-                        bg-gradient-to-r from-red-600 to-yellow-500 hover:from-red-700 hover:to-yellow-600 transition-all duration-300 
-                        text-white font-extrabold text-xl sm:text-2xl shadow-inner-lg rounded-t-xl faq-toggle-button"
-                        aria-expanded="false" data-target="#staff-content-area">
-            
+    <!-- FAQ 1: How to become staff -->
+    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-6">
+        <button class="faq-toggle-button w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none text-white font-extrabold text-xl sm:text-2xl rounded-t-xl"
+                aria-expanded="false" data-target="#staff-content-area">
             <span>How can I become staff?</span>
-            
-            
-            <svg class="w-7 h-7 transform transition-transform duration-300 text-yellow-200 faq-arrow-icon" 
+            <svg class="w-7 h-7 transform transition-transform duration-300 faq-arrow-icon" 
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
 
-        
-        <div id="staff-content-area" class="expand-content p-4 text-gray-200 bg-gray-900/90">
+        <div id="staff-content-area" class="expand-content px-6 text-gray-200 bg-gray-900/90">
             <div class="space-y-6">
-                
                 <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">The Path to Our Staff Team</h3>
                 <p class="text-base leading-relaxed text-gray-300">
-                    We love when members want to help the community! Being staff means being a positive role model. Here’s what you need to do and know:
+                    We love when members want to help the community! Being staff means being a positive role model, professional, and dedicated. Here's your path to joining the team:
                 </p>
                 
-                <!-- Step 1 -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 1: Join Our Community</h4>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-green-400">Step 1: Join Our Community</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Join our Roblox group and Discord server</li>
+                        <li>Read the rules and familiarize yourself with our community</li>
+                        <li>Be active and respectful in-game and on Discord</li>
+                        <li>Show maturity and professionalism in all interactions</li>
                     </ul>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 2: Attend at a Training Session</h4>
-                    <p class="text-gray-300">If you gonna fail, please don't give up! You can always try again.</p>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-green-400">Step 2: Attend a Training Session</h4>
+                    <p class="text-gray-300">Training sessions are announced in Discord. Don't give up if you don't pass the first time - you can always try again!</p>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Check Discord announcements for training times</li>
+                        <li>Arrive on time and be prepared</li>
+                        <li>Follow instructions carefully</li>
+                        <li>Demonstrate professionalism and knowledge</li>
+                        <li>Ask questions if you're unsure about anything</li>
                     </ul>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 3: Passed Training</h4>
+                    <h4 class="text-xl font-semibold text-green-400">Step 3: Pass Training & Get Promoted</h4>
                     <p class="text-gray-300">
-                        After passing the Training, you will be promoted to Junior store colleague or if you attended at security training you will be promoted to Junior Guard.
+                        After successfully passing training, you'll be promoted to:
                     </p>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li><strong>Junior Kitchen Staff (JKS)</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-teal-500/10 rounded-lg border-l-4 border-teal-400 mt-4">
+                    <p class="text-teal-300 font-semibold">💡 Pro Tip:</p>
+                    <p class="text-gray-300 text-sm mt-1">Be patient, respectful, and show genuine interest in helping the community. Trainers look for dedication and professionalism!</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-8 border-2 border-gray-700">
 
-        
-        <button class="w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none 
-                        bg-gradient-to-r from-red-600 to-yellow-500 hover:from-red-700 hover:to-yellow-600 transition-all duration-300 
-                        text-white font-extrabold text-xl sm:text-2xl shadow-inner-lg rounded-t-xl faq-toggle-button"
-                        aria-expanded="false" data-target="#mr-content-area">
-            
-            <span>How to become manager(MR)?</span>
-            
-            
-            <svg class="w-7 h-7 transform transition-transform duration-300 text-yellow-200 faq-arrow-icon" 
+    <!-- FAQ 2: How to become manager -->
+    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-6">
+        <button class="faq-toggle-button w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none text-white font-extrabold text-xl sm:text-2xl rounded-t-xl"
+                aria-expanded="false" data-target="#mr-content-area">
+            <span>How to become a manager (MR)?</span>
+            <svg class="w-7 h-7 transform transition-transform duration-300 faq-arrow-icon" 
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
 
-        
-        <div id="mr-content-area" class="expand-content p-4 text-gray-200 bg-gray-900/90">
+        <div id="mr-content-area" class="expand-content px-6 text-gray-200 bg-gray-900/90">
             <div class="space-y-6">
-                
-                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">The Path to Our manager Team</h3>
+                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">The Path to Management</h3>
                 <p class="text-base leading-relaxed text-gray-300">
-                    We love when members want to help the community! Being MR means being a positive role model. Here’s what you need to do and know:
+                    Becoming a manager is a significant responsibility! MRs help lead the team, train new staff, and ensure smooth operations. Here's how to get there:
                 </p>
-                
-                <!-- Step 1 -->
+
+                <h2 class="text-2xl font-bold text-yellow-400">Option 1: Apply for Management</h2>
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 1: Be staff member(SC/SG)</h4>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-purple-400">Step 1: Be an Active Staff Member</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>You must be a Intern Kitchen leader(IKL) or higher rank</li>
+                        <li>Be active in-game and attend shifts regularly</li>
+                        <li>Demonstrate professionalism and leadership qualities</li>
+                        <li>Help newer staff members and be a positive role model</li>
+                        <li>Show dedication to the community</li>
                     </ul>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 2: Join in our Discord</h4>
-                    <p class="text-gray-300"></p>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-purple-400">Step 2: Join Our Discord</h4>
+                    <p class="text-gray-300">Make sure you're active in our Discord server - this is where applications are submitted and announcements are made.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-purple-400">Step 3: Submit an Application</h4>
+                    <p class="text-gray-300">When you feel ready:</p>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Head to the #staff-announcements channel in Discord</li>
+                        <li>Find the Management (MR) application</li>
+                        <li>Fill it out completely and honestly</li>
+                        <li>Submit and wait for results</li>
                     </ul>
                 </div>
 
-                <!-- Step 3 -->
+                <div class="p-4 bg-yellow-500/10 rounded-lg border-l-4 border-yellow-400 mt-4">
+                    <p class="text-yellow-300 font-semibold">⚠️ Important Note:</p>
+                    <p class="text-gray-300 text-sm mt-1">Please don't ask for early results or status updates. We'll announce decisions when applications have been reviewed. Patience shows maturity!</p>
+                </div>
+                <h2 class="text-2xl font-bold text-yellow-400">Option 2: Get promoted</h2>
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Step 3: Head down to applications</h4>
-                    <p class="text-gray-300">
-                        After you headed down to applications, you will see the application for MR. Fill it out and wait for the results.
-                    </p>
-                    <p class="text-sm font-bold text-yellow-400 mt-2">
-                        Note: Please don't ask for early results, we will announce it when it gonna be checked.
-                    </p>
+                    <h4 class="text-xl font-semibold text-purple-400">Step 1: Be an Active Staff Member</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>You must be a Intern manager (IM)</li>
+                        <li>Be active in-game and attend shifts regularly</li>
+                        <li>Demonstrate professionalism and leadership qualities</li>
+                        <li>Help newer staff members and be a positive role model</li>
+                        <li>Show dedication to the community</li>
+                    </ul>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-purple-400">Step 2: Excel in Your Role</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Consistently perform well during shifts</li>
+                        <li>Communicate effectively with other staff and management</li>
+                        <li>Show reliability and dedication over time</li>
+                    </ul>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-purple-400">Step 3: Wait for Promotion Consideration</h4>
+                    <p class="text-gray-300">Promotions are based on merit and availability. Continue to demonstrate your value to the team!</p>
+                </div>
+                <div class="p-4 bg-yellow-500/10 rounded-lg border-l-4 border-yellow-400 mt-4">
+                    <p class="text-yellow-300 font-semibold">⭐ Pro Tip:</p>
+                    <p class="text-gray-300 text-sm mt-1">Demonstrating leadership, reliability, and dedication increases your chances of promotion. Keep up the great work!</p>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-8 border-2 border-gray-700">
-
-        
-        <button class="w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none 
-                        bg-gradient-to-r from-red-600 to-yellow-500 hover:from-red-700 hover:to-yellow-600 transition-all duration-300 
-                        text-white font-extrabold text-xl sm:text-2xl shadow-inner-lg rounded-t-xl faq-toggle-button"
-                        aria-expanded="false" data-target="#training-content-area">
-            
-            <span>When will be training?</span>
-            
-            
-            <svg class="w-7 h-7 transform transition-transform duration-300 text-yellow-200 faq-arrow-icon" 
+    <!-- FAQ 3: Training Schedule -->
+    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-6">
+        <button class="faq-toggle-button w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none text-white font-extrabold text-xl sm:text-2xl rounded-t-xl"
+                aria-expanded="false" data-target="#training-content-area">
+            <span>When are training sessions held?</span>
+            <svg class="w-7 h-7 transform transition-transform duration-300 faq-arrow-icon" 
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
 
-        
-        <div id="training-content-area" class="expand-content p-4 text-gray-200 bg-gray-900/90">
+        <div id="training-content-area" class="expand-content px-6 text-gray-200 bg-gray-900/90">
             <div class="space-y-6">
-                
-                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">Information about how offten is trainings</h3>
+                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">Training Schedule Information</h3>
                 <p class="text-base leading-relaxed text-gray-300">
-                    We love when people want to join our team! Trainings are hosted by our trainers. Here’s what you need to do and know how offten is training:
+                    We love when people want to join our team! Training sessions are hosted regularly by our dedicated trainers.
                 </p>
 
-                <!-- Information -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Our trainers schedule</h4>
-                    <p class="text-gray-300">Our trainers are hosting trainings regularly. But please respect their time and availability.</p>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-blue-400">Our Training Schedule</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Training sessions are held <strong>multiple times per week</strong></li>
+                        <li>Exact times are announced in our Discord server's announcements channel</li>
+                        <li>There are available kitchen staff training sessions</li>
+                        <li>Sessions typically last 30-45 minutes</li>
                     </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-blue-400">How to Prepare</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Join our Discord and enable notifications for announcements</li>
+                        <li>Arrive 5-10 minutes early to show dedication</li>
+                        <li>Be respectful and follow all instructions</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-blue-500/10 rounded-lg border-l-4 border-blue-400 mt-4">
+                    <p class="text-blue-300 font-semibold">📅 Stay Informed:</p>
+                    <p class="text-gray-300 text-sm mt-1">Check Discord regularly for training announcements. Our trainers host sessions consistently, but please respect their time and availability!</p>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-8 border-2 border-gray-700">
-
-        
-        <button class="w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none 
-                        bg-gradient-to-r from-red-600 to-yellow-500 hover:from-red-700 hover:to-yellow-600 transition-all duration-300 
-                        text-white font-extrabold text-xl sm:text-2xl shadow-inner-lg rounded-t-xl faq-toggle-button"
-                        aria-expanded="false" data-target="#shift-content-area">
-
-            <span>When will be shift?</span>
-            
-            
-            <svg class="w-7 h-7 transform transition-transform duration-300 text-yellow-200 faq-arrow-icon" 
+    <!-- FAQ 4: Shift Schedule -->
+    <div class="w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden faq-card mb-8">
+        <button class="faq-toggle-button w-full p-5 flex items-center justify-between cursor-pointer focus:outline-none text-white font-extrabold text-xl sm:text-2xl rounded-t-xl"
+                aria-expanded="false" data-target="#shift-content-area">
+            <span>When are shifts held?</span>
+            <svg class="w-7 h-7 transform transition-transform duration-300 faq-arrow-icon" 
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
 
-        
-        <div id="shift-content-area" class="expand-content p-4 text-gray-200 bg-gray-900/90">
+        <div id="shift-content-area" class="expand-content px-6 text-gray-200 bg-gray-900/90">
             <div class="space-y-6">
-
-                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">Information about how offten is shifts</h3>
+                <h3 class="text-2xl font-bold text-teal-400 border-b pb-2 border-gray-700">Shift Schedule Information</h3>
                 <p class="text-base leading-relaxed text-gray-300">
-                    We love when staff members want to attend shifts! Shifts are hosted by our senior supervisors and higher. Here’s what you need to do and know how offten is shifts:
+                    Shifts are where staff members work together, serve customers, and gain valuable experience! They're hosted by Senior Manager and higher ranks.
                 </p>
 
-                <!-- Information -->
                 <div class="space-y-2">
-                    <h4 class="text-xl font-semibold text-red-400">Our supervisors schedule</h4>
-                    <p class="text-gray-300">Our supervisors are hosting shifts regularly. But please respect their time and availability.</p>
-                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-1">
+                    <h4 class="text-xl font-semibold text-green-400">Our Shift Schedule</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Shifts are held <strong>regularly throughout the week</strong></li>
+                        <li>Announcements are posted in Discord before each shift</li>
+                        <li>Shifts typically last 45-60 minutes</li>
+                        <li>All staff members are encouraged to attend when available</li>
                     </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-green-400">What Happens During Shifts?</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Staff work their assigned positions (checkout, food service, etc.)</li>
+                        <li>Managers oversee operations and provide guidance</li>
+                        <li>Great opportunity to demonstrate your skills for promotions</li>
+                        <li>Build camaraderie with other staff members</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xl font-semibold text-green-400">Benefits of Attending</h4>
+                    <ul class="list-disc list-inside ml-4 text-gray-300 space-y-2">
+                        <li>Gain experience and improve your skills</li>
+                        <li>Get noticed by management for promotions</li>
+                        <li>Earn recognition and rewards</li>
+                        <li>Have fun with the community!</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-green-500/10 rounded-lg border-l-4 border-green-400 mt-4">
+                    <p class="text-green-300 font-semibold">⭐ Pro Tip:</p>
+                    <p class="text-gray-300 text-sm mt-1">Regular attendance at shifts shows dedication and is often considered for promotions. Our supervisors host frequently, but please respect their time and availability!</p>
                 </div>
             </div>
         </div>
     </div>
-    
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
             const toggleButtons = document.querySelectorAll('.faq-toggle-button');
 
-           
             toggleButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    
                     const targetId = button.getAttribute('data-target');
                     const content = document.querySelector(targetId);
-                    
-                    
                     const icon = button.querySelector('.faq-arrow-icon');
                     
-                    if (!content || !icon) return; 
+                    if (!content || !icon) return;
 
                     const isExpanded = content.classList.contains('active');
                     
-                    
                     content.classList.toggle('active');
-
-                    
                     button.setAttribute('aria-expanded', !isExpanded);
 
-                    
                     if (isExpanded) {
-                        icon.style.transform = 'rotate(0deg)'; 
+                        icon.style.transform = 'rotate(0deg)';
                     } else {
-                        icon.style.transform = 'rotate(180deg)'; 
+                        icon.style.transform = 'rotate(180deg)';
                     }
                 });
             });

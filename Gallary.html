@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WingyBlox - Gallery</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-attachment: fixed;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(79, 209, 197, 0.3);
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(79, 209, 197, 0.3);
+        }
+        
+        .gallery-item img {
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .btn-back {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-back:hover {
+            box-shadow: 0 6px 25px rgba(72, 187, 120, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 50px rgba(79, 209, 197, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #4fd1c5 0%, #48bb78 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="p-4 min-h-screen">
+
+    <!-- Header -->
+    <header class="text-center mb-12 p-8 rounded-2xl bg-gray-900/90 backdrop-blur-sm shadow-2xl max-w-6xl mx-auto border-b-4 border-teal-400">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 text-glow">
+            WingyBlox Gallery
+        </h1>
+        <h3 class="text-xl md:text-2xl font-semibold mt-4 text-gray-300">
+            Explore our beautiful workplace environment
+        </h3>
+    </header>
+
+    <!-- Back Button -->
+    <div class="flex justify-center mb-12">
+        <button onclick="window.location.href='index.html';" 
+                class="btn-back px-8 py-3 rounded-xl bg-green-600 text-white font-bold text-lg border-b-4 border-green-800 active:border-b-2 active:translate-y-0.5">
+            ← Back to Menu
+        </button>
+    </div>
+
+       <!-- Gallery Grid -->
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Corporate Offices Section -->
+        <div class="mb-16">
+            <div class="flex items-center mb-6">
+                <span class="category-badge text-white">🏢 Corporate Offices</span>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Conference Room -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/ShiftRoom.png" 
+                         alt="Professional Conference Room" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Conference+Room'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Professional Conference Room</p>
+                    </div>
+                </div>
+
+                <!-- Reception Area -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Wall.png" 
+                         alt="Modern Reception Area" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Reception+Area'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Modern Reception Area</p>
+                    </div>
+                </div>
+
+                <!-- Office Space -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Offices.png" 
+                         alt="Private Office Space" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Office+Space'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Private Office Space</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Break & Social Areas Section -->
+        <div class="mb-16">
+            <div class="flex items-center mb-6">
+                <span class="category-badge text-white">🔥 Break & Social Areas</span>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Fire Pit -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Break1.png" 
+                         alt="Outdoor Fire Pit Lounge" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Fire+Pit'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Outdoor Fire Pit Lounge</p>
+                    </div>
+                </div>
+
+                <!-- Break Room -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Interior1.png" 
+                         alt="Employee Break Room" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Break+Room'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Employee Break Room</p>
+                    </div>
+                </div>
+
+                <!-- Dining Area -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Interior2.png" 
+                         alt="Staff Dining Area" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Dining+Area'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">Staff Dining Area</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Building Exterior Section -->
+        <div class="mb-16">
+            <div class="flex items-center mb-6">
+                <span class="category-badge text-white">🏗️ Building Exterior</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Front Exterior -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Restourant2.png" 
+                         alt="WingyBlox Building - Front View" 
+                         class="w-full h-80 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Front+Exterior'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">WingyBlox Building - Front View</p>
+                    </div>
+                </div>
+
+                <!-- Side Exterior -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="Photos/Restourant.png" 
+                         alt="WingyBlox Building - Side View" 
+                         class="w-full h-80 object-cover"
+                         onerror="this.src='https://placehold.co/800x600/1a1a2e/4fd1c5?text=Side+Exterior'">
+                    <div class="gallery-overlay">
+                        <p class="text-white font-semibold text-lg">WingyBlox Building - Side View</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center p-8 rounded-2xl bg-gradient-to-r from-teal-600/20 to-green-600/20 backdrop-blur-md border-2 border-teal-500/30 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Experience It Yourself?</h2>
+            <p class="text-gray-300 text-lg mb-6">Join WingyBlox today and be part of our growing community!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.roblox.com/communities/15554621/Laidls-Group#!/about" target="_blank"
+                   class="px-8 py-4 rounded-xl bg-gradient-to-r from-teal-500 to-green-500 text-white font-bold text-lg no-underline hover:from-teal-600 hover:to-green-600 transition-all duration-300 hover:scale-105 shadow-lg">
+                    Join Our Group
+                </a>
+                
+                <a href="https://discord.gg/CJX9C52bvg" target="_blank"
+                   class="px-8 py-4 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold text-lg no-underline transition-all duration-300 hover:scale-105 shadow-lg">
+                    Join Discord
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+</html>

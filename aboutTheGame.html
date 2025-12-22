@@ -3,102 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About The Game</title>
+    <title>About WingyBlox</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url('https://img.itch.zone/aW1hZ2UvMjYyMjMwMC8xNTczMDkwNy5qcGc=/original/AI7LNE.jpg');
-            background-size: cover;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             background-attachment: fixed;
-            background-position: center;
         }
+        
         .text-glow {
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(100, 100, 100, 0.5);
+            text-shadow: 0 0 20px rgba(79, 209, 197, 0.3);
         }
         
         .info-box {
-            background-color: rgba(31, 41, 55, 0.95); 
+            background: linear-gradient(145deg, rgba(79, 209, 197, 0.05), rgba(72, 187, 120, 0.05));
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .info-box:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-item {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateX(5px);
+        }
+
+        .btn-back {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-back:hover {
+            box-shadow: 0 6px 25px rgba(72, 187, 120, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-play {
+            background: linear-gradient(135deg, #4fd1c5 0%, #48bb78 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 209, 197, 0.4);
+        }
+
+        .btn-play:hover {
+            box-shadow: 0 6px 25px rgba(79, 209, 197, 0.6);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
-<body class="p-4 min-h-screen flex flex-col items-center">
+<body class="p-4 min-h-screen">
 
-    
-    <header class="text-center mb-12 p-6 rounded-2xl bg-gray-900/80 backdrop-blur-sm shadow-2xl max-w-3xl w-full border-b-4 border-teal-400">
-        <h1 class="text-5xl font-extrabold text-teal-400 text-glow">About The Game</h1>
-        <h3 class="text-2xl font-semibold mt-3 text-violet-500 text-glow">This is where you can find information about the game</h3>
+    <!-- Header -->
+    <header class="text-center mb-12 p-8 rounded-2xl bg-gray-900/90 backdrop-blur-sm shadow-2xl max-w-4xl mx-auto border-b-4 border-teal-400">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-400 text-glow">
+            About WingyBlox
+        </h1>
+        <h3 class="text-xl md:text-2xl font-semibold mt-4 text-gray-300">
+            Professional Workplace Roleplay Experience
+        </h3>
     </header>
 
-    
-    <div class="flex flex-wrap justify-center gap-6 mb-12">
-        
-        
+    <!-- Navigation Buttons -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12 max-w-4xl mx-auto">
         <button onclick="window.location.href='index.html';" 
-                class="px-8 py-3 rounded-xl bg-green-700 text-white font-bold text-lg 
-                       transition-all duration-300 shadow-xl hover:bg-green-600 transform hover:scale-105 
-                       border-b-4 border-green-900 active:border-b-2 active:translate-y-0.5">
-            ← Get Back to Menu
+                class="btn-back px-8 py-3 rounded-xl bg-green-600 text-white font-bold text-lg border-b-4 border-green-800 active:border-b-2 active:translate-y-0.5">
+            ← Back to Menu
         </button>
 
-        
-        <a href="https://www.roblox.com/games/78242982256332/Laidls-supermarket-Official" target="_blank"
-            class="px-8 py-3 rounded-xl bg-red-600 text-white font-bold text-lg 
-                            transition-all duration-300 shadow-xl hover:bg-red-500 transform hover:scale-105 
-                            border-b-4 border-red-800 active:border-b-2 active:translate-y-0.5 no-underline flex items-center space-x-2">
-            
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
-            <span>Play Laidls Supermarket!</span>
+        <a href="https://www.roblox.com/communities/15554621/Laidls-Group#!/about" target="_blank"
+            class="btn-play px-8 py-3 rounded-xl text-white font-bold text-lg no-underline flex items-center space-x-2">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Join Our Group</span>
         </a>
     </div>
 
-    
-    <div class="max-w-3xl w-full space-y-8">
+    <!-- Content Container -->
+    <div class="max-w-4xl mx-auto space-y-8 pb-12">
         
-        
-        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-teal-400">
-            <h2 class="text-3xl font-bold text-teal-300 mb-4 border-b pb-2 border-gray-700">What is Laidls Supermarket?</h2>
+        <!-- What is WingyBlox -->
+        <div class="info-box p-8 rounded-xl shadow-2xl border-teal-400 bg-gray-800/90 backdrop-blur-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-teal-300 mb-6 flex items-center">
+                <span class="text-4xl mr-3">🏢</span>
+                What is WingyBlox?
+            </h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                <span class="font-bold text-white">WingyBlox</span> is an immersive professional workplace roleplay experience built on Roblox. Step into a modern, beautifully designed restaurant and corporate environment where you can build your career from the ground up!
+            </p>
             <p class="text-gray-300 text-lg leading-relaxed">
-                <span class="font-bold text-white">Laidls Supermarket</span> is a vibrant, massive multiplayer role-playing experience built on Roblox. It’s a huge, fully stocked environment where you can choose your life!
-                <br><br>
-                Become a dedicated Employee and work through the ranks by stocking the detailed aisles like the Produce, Meat, or role-play as a Shopper, get down and purchasing hundreds of unique items using the realistic checkout system. Every area, from the main floor to the back rooms, is ready for your story!
+                Whether you want to work as a dedicated staff member, serve customers in our restaurant, manage operations as a manager, or climb the corporate ladder to executive leadership - WingyBlox offers a realistic and engaging workplace simulation where <span class="text-teal-400 font-semibold">your dedication and hard work truly matter</span>.
             </p>
         </div>
 
-        
-        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-violet-400">
-            <h2 class="text-3xl font-bold text-violet-400 mb-4 border-b pb-2 border-gray-700">Awesome Features!</h2>
-            <div class="space-y-4 text-gray-300">
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl text-yellow-400">👨‍🍳</span>
-                    <p><strong>Fresh Food:</strong> Work at the pizza place or at cozy plate(MR+ only).</p>
+        <!-- Features -->
+        <div class="info-box p-8 rounded-xl shadow-2xl border-green-400 bg-gray-800/90 backdrop-blur-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 flex items-center">
+                <span class="text-4xl mr-3">✨</span>
+                Awesome Features!
+            </h2>
+            <div class="space-y-5">
+
+                <div class="feature-item flex items-start space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900/70">
+                    <span class="text-3xl">🔐</span>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-1">Detailed Staff Areas</p>
+                        <p class="text-gray-400">Experience authentic employee life! Access staff rooms, break areas, training rooms, and executive offices for important meetings.</p>
+                    </div>
                 </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl text-yellow-400">🔐</span>
-                    <p><strong>Detailed Staff Areas:</strong> Experience the life of an employee behind the scenes! Access the staff room, and manager's offices to take breaks, and hold important meetings.</p>
+
+                <div class="feature-item flex items-start space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900/70">
+                    <span class="text-3xl">👔</span>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-1">Professional Environment</p>
+                        <p class="text-gray-400">Work in a modern, realistic corporate setting with professional meeting rooms, offices, and reception areas.</p>
+                    </div>
                 </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl text-yellow-400">🛒</span>
-                    <p><strong>Realistic Shopping:</strong> Come down to explore the massive store. Interact with hundreds of different products to buy!</p>
+
+                <div class="feature-item flex items-start space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900/70">
+                    <span class="text-3xl">📊</span>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-1">Career Progression</p>
+                        <p class="text-gray-400">Start as a trainee and advance through the ranks. Attend training sessions, pass evaluations, and earn promotions to management!</p>
+                    </div>
                 </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl text-yellow-400">📦</span>
-                    <p><strong>Inventory & Stocking:</strong> Employees can find items in the back warehouse, and ensure the shelves are always full.</p>
+
+                <div class="feature-item flex items-start space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900/70">
+                    <span class="text-3xl">🎯</span>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-1">Realistic Operations</p>
+                        <p class="text-gray-400">Experience authentic workplace systems including shift schedules, training programs, and management responsibilities.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item flex items-start space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900/70">
+                    <span class="text-3xl">🔥</span>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-1">Social Spaces</p>
+                        <p class="text-gray-400">Relax at our outdoor fire pit, hang out in break rooms, and connect with the community in various social areas.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        
-        <div class="info-box p-8 rounded-xl shadow-2xl border-l-4 border-red-500">
-            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b pb-2 border-gray-700">What's Coming Next?</h2>
-            <p class="text-gray-300 text-lg leading-relaxed mb-4">
-                We're always building and expanding Laidls! Here are some exciting updates you can look forward to:
+        <!-- Career Path -->
+        <div class="info-box p-8 rounded-xl shadow-2xl border-purple-400 bg-gray-800/90 backdrop-blur-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-purple-400 mb-6 flex items-center">
+                <span class="text-4xl mr-3">📈</span>
+                Your Career Journey
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
+                    <div class="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold">1</div>
+                    <div>
+                        <p class="text-white font-semibold">Join & Train</p>
+                        <p class="text-gray-400 text-sm">Join the community and attend training sessions to become a Junior Staff member</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
+                    <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">2</div>
+                    <div>
+                        <p class="text-white font-semibold">Work & Excel</p>
+                        <p class="text-gray-400 text-sm">Attend shifts, demonstrate professionalism, and gain experience</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
+                    <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">3</div>
+                    <div>
+                        <p class="text-white font-semibold">Apply for Management</p>
+                        <p class="text-gray-400 text-sm">Once you're ready, apply for management positions through our Discord</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">4</div>
+                    <div>
+                        <p class="text-white font-semibold">Lead the Team</p>
+                        <p class="text-gray-400 text-sm">Become a manager and help shape the community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's Coming Next -->
+        <div class="info-box p-8 rounded-xl shadow-2xl border-orange-400 bg-gray-800/90 backdrop-blur-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-orange-400 mb-6 flex items-center">
+                <span class="text-4xl mr-3">🚀</span>
+                What's Coming Next?
+            </h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                WingyBlox is constantly evolving! We're actively developing new features and areas to make your experience even better. Here's what's on the horizon:
             </p>
-            <ul class="list-disc list-inside space-y-3 text-gray-400 ml-4">
-                <li>**pharmacy release:** A new pharmacy will be released soon, bringing even more shopping options to Laidls!</li>
+            <ul class="space-y-4">
+                <li class="flex items-start space-x-3 p-3 rounded-lg bg-gray-900/50">
+                    <span class="text-2xl">🎮</span>
+                    <div>
+                        <p class="text-white font-semibold">Enhanced Systems</p>
+                        <p class="text-gray-400 text-sm">Improved training systems, better shift management, and more interactive features</p>
+                    </div>
+                </li>
+                <li class="flex items-start space-x-3 p-3 rounded-lg bg-gray-900/50">
+                    <span class="text-2xl">🎉</span>
+                    <div>
+                        <p class="text-white font-semibold">Special Events</p>
+                        <p class="text-gray-400 text-sm">Regular community events, competitions, and seasonal celebrations</p>
+                    </div>
+                </li>
             </ul>
+            
+            <div class="mt-6 p-4 rounded-lg bg-yellow-500/10 border-2 border-yellow-500/30">
+                <p class="text-yellow-400 font-semibold flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
+                    Stay Updated!
+                </p>
+                <p class="text-gray-300 text-sm mt-2">Join our Discord server to get the latest development updates, participate in beta testing, and suggest new features!</p>
+            </div>
         </div>
 
     </div>
